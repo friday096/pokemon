@@ -30,3 +30,9 @@ Start the development server:
 npm run dev
 
 The app will be running at http://localhost:3000
+
+🌐 Live Demo
+
+You can check out the live version of this project here:
+
+[Live Demo](https://pokemon-six-blue.vercel.app)
