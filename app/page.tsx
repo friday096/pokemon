@@ -50,23 +50,24 @@ export default function Home() {
         placeholder="Search Pokémon..."
         value={searchTerm}
         onChange={handleSearch}
-        className="w-80"
+        className="w-full sm:w-80"
       />
 
       {displayedPokemon.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {displayedPokemon.map((pokemon) => (
-            <Link
-              key={pokemon.name}
-              href={`/pokemon/${pokemon.name}`}
-              className="p-6 rounded-lg shadow-lg border border-gray-200 hover:bg-violet-500 hover:text-white hover:scale-105 hover:shadow-2xl transition-transform dark:bg-gray-800"
-            >
-              <h2 className="text-xl text-white font-semibold text-center capitalize">
-                {pokemon.name}
-              </h2>
-            </Link>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+  {displayedPokemon.map((pokemon) => (
+    <Link
+      key={pokemon.name}
+      href={`/pokemon/${pokemon.name}`}
+      className="p-6 rounded-lg shadow-lg border border-gray-200 hover:bg-violet-500 hover:text-white hover:scale-105 hover:shadow-2xl transition-transform dark:bg-gray-800 w-full"
+    >
+      <h2 className="text-xl text-white font-semibold text-center capitalize">
+        {pokemon.name}
+      </h2>
+    </Link>
+  ))}
+</div>
+
       ) : (
         <p className="text-2xl font-semibold text-white">Pokemon Not Found</p>
       )}
